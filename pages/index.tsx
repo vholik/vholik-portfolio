@@ -116,7 +116,7 @@ const Home: NextPage = () => {
           <div className="container">
             <h1 className="about__text">
               Wir sind eine Agentur mit Fokus auf digitale Marketing sowie
-              progressivem Design für Startups und etablierte KMU's. Innovativ
+              progressivem Design für Startups und etablierte KMUs. Innovativ
               und international konkurrenzfähig.
             </h1>
             <div className="about__link">
