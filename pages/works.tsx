@@ -24,8 +24,16 @@ function Works() {
               <div className="navbar-item">
                 <p className="navbar-item__header">Contact me</p>
                 <div className="right">
-                  <p className="link">project@viktorholik.com</p>
-                  <p className="link">via: linked in</p>
+                  <a href="mailto:1viktorholik@gmail.com">
+                    <p className="link">1viktorholik@gmail.com</p>
+                  </a>
+                  <a
+                    href="https://www.linkedin.com/in/viktorholik/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <p className="link">linked in</p>
+                  </a>
                 </div>
               </div>
               <div className="navbar-item">

@@ -40,8 +40,7 @@ function Footer() {
             </div>
             <div className="right">
               <h2 className="hire-me__title">
-                Wir entwickeln starke digitale und analoge Brand Identities, die
-                beeindrucken.
+                I am always up to work and offers, hit me up!
               </h2>
               <button className="hire-me__button">
                 Hire me
@@ -57,14 +56,24 @@ function Footer() {
             <h1 className="footer__title">(Contacts + Social Media)</h1>
             <div className="footer__inner">
               <div className="col">
-                <p className="nav-link">
-                  via: <span className="link">linked in</span>
-                </p>
+                <a
+                  href="https://www.linkedin.com/in/viktorholik/"
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  <p className="nav-link">
+                    via: <span className="link">linked in</span>
+                  </p>{" "}
+                </a>
               </div>
               <div className="col">
                 <h2 className="col__title">Give me a call or send a message</h2>
-                <p className="nav-link">tel: +49-(0)-6333-7757898</p>
-                <p className="nav-link">mail: project@viktorholik.com</p>
+                <a href="tel:+380665058983">
+                  <p className="nav-link">tel: +38-(0)-665-505-8983</p>
+                </a>
+                <a href="mailto:1viktorholik@gmail.com">
+                  <p className="nav-link">mail: 1viktorholik@gmail.com</p>
+                </a>
               </div>
               <div className="col">
                 <p className="nav-link">

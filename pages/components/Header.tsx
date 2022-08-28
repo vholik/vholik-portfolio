@@ -8,7 +8,7 @@ function Header() {
         <div className="container">
           <div className="header__inner">
             <Link href="/">
-              <div className="logo nav-item">VIKTOR+HOLIK</div>
+              <div className="logo nav-item">VIKTOR HOLIK</div>
             </Link>
             <div className="nav nav-item">
               <Link href="/">
