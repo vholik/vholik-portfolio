@@ -6,7 +6,7 @@ import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 import { useEffect, useRef } from "react";
 
-const Footer = () => {
+function Footer() {
   const footer = useRef(null);
   const hireSection = useRef(null);
   useEffect(() => {
@@ -89,6 +89,6 @@ const Footer = () => {
       </section>
     </FooterStyling>
   );
-};
+}
 
 export default Footer;

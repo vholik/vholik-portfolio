@@ -12,7 +12,7 @@ import Link from "next/link";
 import Header from "./components/Header";
 import cases from "../cases";
 
-const Home: NextPage = () => {
+function Home() {
   const highlightSection = useRef(null);
   const highlightText = useRef(null);
   const introSection = useRef(null);
@@ -179,6 +179,6 @@ const Home: NextPage = () => {
       <Footer />
     </HomeStyling>
   );
-};
+}
 
 export default Home;
