@@ -51,6 +51,9 @@ export const CaseStyling = styled(motion.div)`
       font-size: 96px;
       color: var(--light);
     }
+    a {
+      text-decoration: none;
+    }
     .visit-btn {
       cursor: pointer;
       color: var(--light);

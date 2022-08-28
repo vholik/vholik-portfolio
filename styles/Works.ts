@@ -126,6 +126,7 @@ export const WorksStyling = styled(motion.div)`
           .case-title {
             font-size: 64px;
             color: var(--light);
+            cursor: pointer;
           }
         }
       }

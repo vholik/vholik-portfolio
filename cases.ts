@@ -42,6 +42,7 @@ const cases = [
       "UX/UI",
     ],
     images: [OneArticle, SecondArticle, ThirdArticle, FourthArticle],
+    url: "https://articles-front-end.vercel.app/",
   },
   {
     name: "Movie App",
@@ -51,7 +52,8 @@ const cases = [
     description:
       "Service that helps people to discover new movies and tv series, what to watch tonight and what to share with friends",
     techStack: ["React", "Redux ", "UX/UI"],
-    images: [OneMovie, SecondArticle, ThirdMovie, FourthMovie],
+    images: [OneMovie, SecondMovie, ThirdMovie, FourthMovie],
+    url: "https://cinewatch-redux.herokuapp.com/",
   },
   {
     name: "Notes App",
@@ -61,6 +63,7 @@ const cases = [
     description: "Simple notes app",
     techStack: ["React", "UX/UI"],
     images: [OneNotes, SecondNotes],
+    url: "https://viktor-notes.herokuapp.com/",
   },
   {
     name: "Nail studio",
@@ -70,6 +73,7 @@ const cases = [
     description: "Landing page for nails studio",
     techStack: ["HTML&CSS", "JavaScript", "UX/UI"],
     images: [OneStudio, SecondStudio, ThirdStudio, FourthStudio],
+    url: "https://katya-nails-ok.web.app/",
   },
   {
     name: "Futurist",
@@ -79,6 +83,7 @@ const cases = [
     description: "Landing page for english school",
     techStack: ["HTML&CSS", "JavaScript"],
     images: [OneFuturist, SecondFuturist, ThirdFuturist, FourthStudio],
+    url: "https://futuristenglish.herokuapp.com/",
   },
   {
     name: "Crypto UX/UI",
@@ -88,6 +93,7 @@ const cases = [
     description: "UX/UI for crypto service",
     techStack: ["UX/UI"],
     images: [Landing],
+    url: "https://www.figma.com/proto/tOIxLjShqfoxRbe60dmWwC/NFT?page-id=0%3A1&node-id=1%3A6&viewport=241%2C48%2C0.13&scaling=min-zoom",
   },
 ];
 

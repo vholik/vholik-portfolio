@@ -234,6 +234,11 @@ export const HomeStyling = styled(motion.div)`
         flex-direction: column;
         justify-content: space-between;
         cursor: pointer;
+        position: relative;
+
+        &:hover {
+          backdrop-filter: blur(10px);
+        }
         &:hover .case__title {
           opacity: 1;
         }

@@ -72,10 +72,7 @@ const Home: NextPage = () => {
       </Head>
       <main ref={introSection}>
         <video className="video-wrapper" autoPlay loop muted>
-          <source
-            src="https://hitpaw-usercontent.ap-south-1.linodeobjects.com/static/2022-08-20/eB17Zrx8qATHQ0QrMvjiBoHO/outputs/sKizLEWLgIsFccbVohzErKUz.mp4"
-            type="video/mp4"
-          />
+          <source src="http://localhost:3000/tunel.mp4" type="video/mp4" />
         </video>
         <Header />
         <div className="main">
@@ -102,7 +99,7 @@ const Home: NextPage = () => {
                 <p className="navbar-item__header">About me</p>
                 <div className="right">
                   <p className="about-me">
-                    Front-end developer with experience in react + redux
+                    Front-end developer with experience in React + Redux
                   </p>
                 </div>
               </div>
@@ -115,9 +112,10 @@ const Home: NextPage = () => {
         <div className="about">
           <div className="container">
             <h1 className="about__text">
-              Wir sind eine Agentur mit Fokus auf digitale Marketing sowie
-              progressivem Design für Startups und etablierte KMUs. Innovativ
-              und international konkurrenzfähig.
+              Hello, world! I&rsquo;m Viktor Holik, a developer specializing in
+              React and user interface design. I enjoy creating meaningful
+              narratives through smart design and experimenting with new
+              technologies
             </h1>
             <div className="about__link">
               <p>More about me</p>
@@ -166,9 +164,9 @@ const Home: NextPage = () => {
         <div className="highlighted-text-section" ref={highlightSection}>
           <div className="container">
             <h1 className="animated-text" ref={highlightText}>
-              <span className="highlight">We Integrate, </span>
+              <span className="highlight">I Integrate, </span>
               <span className="highlight">collaborate and challange. </span>
-              <span className="highlight">We are digital natives </span>
+              <span className="highlight">I am digital native </span>
               <span className="highlight">embracing the creative freedom </span>
               <span className="highlight">to produce solutions </span>{" "}
               <span className="highlight">to connect, communicate, </span>

@@ -24,10 +24,12 @@ function Case() {
       <div className="container">
         <div className="case-header">
           <div className="case-title">{currentCase.name}</div>
-          <div className="visit-btn">
-            <p>Visit website</p>
-            <Image src={ArrowUp} alt="Visit" />
-          </div>
+          <a href={currentCase.url} target="_blank" rel="noreferrer">
+            <div className="visit-btn">
+              <p>Visit website</p>
+              <Image src={ArrowUp} alt="Visit" />
+            </div>
+          </a>
         </div>
       </div>
       <div

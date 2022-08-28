@@ -13,7 +13,6 @@ function Loading() {
       setDots(dots + 1);
     }
   }, 500);
-  console.log(dots);
   return (
     <LoadingStyling>
       {/* <div className="text-line">V</div>
