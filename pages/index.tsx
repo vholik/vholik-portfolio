@@ -72,7 +72,10 @@ function Home() {
       </Head>
       <main ref={introSection}>
         <video className="video-wrapper" autoPlay loop muted>
-          <source src="http://localhost:3000/tunel.mp4" type="video/mp4" />
+          <source
+            src="https://vholik-portfolio.vercel.app/tunel.mp4"
+            type="video/mp4"
+          />
         </video>
         <Header />
         <div className="main">
