@@ -48,9 +48,11 @@ export const WorksStyling = styled(motion.div)`
     }
     .main {
       &__title {
-        font-family: "Neue Haas Grotesk Display Pro";
+        font-family: var(--title);
+        text-transform: uppercase;
         font-weight: 500;
-        font-size: 7.5vw;
+        font-size: 8vw;
+        font-weight: 800;
         margin-top: 4vw;
         color: var(--light);
       }
@@ -83,7 +85,7 @@ export const WorksStyling = styled(motion.div)`
     .work-title {
       font-size: 64px;
       color: var(--light);
-      font-weight: 400;
+      font-weight: 500;
     }
     .work-inner {
       margin-top: 100px;
@@ -124,9 +126,12 @@ export const WorksStyling = styled(motion.div)`
             }
           }
           .case-title {
-            font-size: 64px;
+            font-family: var(--title);
+            text-transform: uppercase;
+            font-size: 96px;
+            font-weight: 800;
+            margin-top: 4vw;
             color: var(--light);
-            cursor: pointer;
           }
         }
       }

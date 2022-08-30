@@ -2,9 +2,12 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Neue Haas Grotesk Display Pro";
+  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
+  font-weight: 500;
+
   --dark: #1c1c20;
   --light: #f1f1f1;
+  --title: "Druk Cyr", sans-serif;
   background-color: var(--dark);
 }
 

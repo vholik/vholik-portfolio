@@ -48,7 +48,11 @@ export const CaseStyling = styled(motion.div)`
     justify-content: space-between;
     align-items: center;
     .case-title {
-      font-size: 96px;
+      font-family: var(--title);
+      text-transform: uppercase;
+      font-weight: 500;
+      font-size: 120px;
+      font-weight: 800;
       color: var(--light);
     }
     a {

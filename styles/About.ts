@@ -41,9 +41,11 @@ export const AboutStyling = styled(motion.div)`
     }
     .main {
       &__title {
-        font-family: "Neue Haas Grotesk Display Pro";
+        font-family: var(--title);
+        text-transform: uppercase;
         font-weight: 500;
-        font-size: 7.5vw;
+        font-size: 8vw;
+        font-weight: 800;
         margin-top: 4vw;
         color: var(--light);
       }

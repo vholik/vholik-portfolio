@@ -3,6 +3,8 @@ import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
 import { LoadingStyling } from "../styles/Home";
+import "../public/fonts/font1/stylesheet.css";
+import "../public/fonts/font2/stylesheet.css";
 
 function Loading() {
   const [dots, setDots] = useState(0);

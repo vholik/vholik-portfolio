@@ -118,9 +118,11 @@ export const HomeStyling = styled(motion.div)`
     }
     .main {
       &__title {
-        font-family: "Neue Haas Grotesk Display Pro";
+        font-family: var(--title);
+        text-transform: uppercase;
         font-weight: 500;
-        font-size: 7.5vw;
+        font-size: 8vw;
+        font-weight: 800;
         margin-top: 4vw;
         color: var(--light);
       }
@@ -178,6 +180,7 @@ export const HomeStyling = styled(motion.div)`
     margin-top: 200px;
     color: var(--light);
     .all-works-btn {
+      font-weight: 500;
       display: block;
       margin: 45px auto 0 auto;
       border-radius: 20px;
@@ -211,7 +214,11 @@ export const HomeStyling = styled(motion.div)`
         }
       }
       &__title {
-        font-size: 64px;
+        font-size: 96px;
+        font-family: var(--title);
+        text-transform: uppercase;
+        font-weight: 500;
+        font-weight: 800;
       }
     }
     .work-wrapper {
@@ -248,9 +255,10 @@ export const HomeStyling = styled(motion.div)`
         &__title {
           transition: 0.3s ease;
           opacity: 0;
-          font-size: 41px;
+          font-size: 64px;
           text-align: center;
-          font-weight: 500;
+          font-weight: 800;
+          font-family: var(--title);
         }
         .tags-wrapper {
           transition: 0.3s ease;
@@ -271,11 +279,15 @@ export const HomeStyling = styled(motion.div)`
     }
   }
   .animated-text {
-    font-size: 8vw;
     color: var(--light);
     font-weight: 500;
     margin-top: 200px;
     width: 80%;
+    font-family: var(--title);
+    text-transform: uppercase;
+    font-weight: 500;
+    font-size: 8vw;
+    font-weight: 800;
     &__hidden-text {
       opacity: 0.3;
     }
@@ -300,10 +312,15 @@ export const FooterStyling = styled.div`
     border-radius: 10vw !important;
     padding-bottom: 200px;
     &__title {
-      font-size: 72px;
+      font-size: 96px;
       font-weight: 500;
+      font-family: var(--title);
+      text-transform: uppercase;
+      font-weight: 500;
+      font-weight: 800;
     }
     &__button {
+      font-weight: 500;
       margin-top: 45px;
       border-radius: 20px;
       background-color: transparent;
@@ -347,9 +364,13 @@ export const FooterStyling = styled.div`
     padding-bottom: 50px;
 
     &__title {
-      font-size: 64px;
+      font-size: 96px;
       font-weight: 500;
       color: var(--dark);
+      font-family: var(--title);
+      text-transform: uppercase;
+      font-weight: 500;
+      font-weight: 800;
     }
     &__inner {
       margin-top: 200px;
