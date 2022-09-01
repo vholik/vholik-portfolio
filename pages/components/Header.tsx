@@ -1,7 +1,10 @@
 import Link from "next/link";
+import { useDispatch } from "react-redux";
 import { HomeStyling } from "../../styles/Home";
+import { showMenu } from "../redux/appSlice";
 
 function Header() {
+  const dispatch = useDispatch();
   return (
     <HomeStyling>
       <div className="header">
@@ -27,7 +30,9 @@ function Header() {
               <p className="header__description">
                 Front-end developer based in Poland
               </p>
-              <p className="menu">MENU</p>
+              <p className="menu" onClick={() => dispatch(showMenu())}>
+                MENU
+              </p>
             </div>
           </div>
         </div>

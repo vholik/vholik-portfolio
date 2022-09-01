@@ -2,9 +2,14 @@ import "../styles/globals.css";
 import type { AppProps } from "next/app";
 import { useRouter } from "next/router";
 import { useEffect, useState } from "react";
-import { LoadingStyling } from "../styles/Home";
+import { LoadingStyling, MenuStyling } from "../styles/Home";
 import "../public/fonts/font1/stylesheet.css";
 import "../public/fonts/font2/stylesheet.css";
+import { store } from "./redux/store";
+import { Provider } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import type { RootState } from "./redux/store";
+import { showMenu } from "./redux/appSlice";
 
 function Loading() {
   const [dots, setDots] = useState(0);
@@ -41,6 +46,36 @@ function Loading() {
   );
 }
 
+const Menu = () => {
+  const dispatch = useDispatch();
+  return (
+    // style={isShowMenu ? { display: "block" } : { display: "none" }}
+    <div>
+      <MenuStyling>
+        <div className="container">
+          <div className="menu-inner">
+            <div className="menu-button" onClick={() => dispatch(showMenu())}>
+              <div className="line"></div>
+              <div className="line"></div>
+            </div>
+            <div className="link-wrapper">
+              <span className="link">HOME</span>
+              <span className="link">ABOUT</span>
+              <span className="link">WORKS</span>
+            </div>
+            <p className="contact-link">Lets work together</p>
+            <div className="social-wrapper">
+              <span className="social-link">INSTAGRAM</span>
+              <span className="social-link">LINKEDIN</span>
+              <span className="social-link">FACEBOOK</span>
+            </div>
+          </div>
+        </div>
+      </MenuStyling>
+    </div>
+  );
+};
+
 function MyApp({ Component, pageProps }: AppProps) {
   const [isLoading, setIsLoading] = useState(true);
   const [isShowContent, setIsShowContent] = useState(false);
@@ -48,13 +83,22 @@ function MyApp({ Component, pageProps }: AppProps) {
     setTimeout(() => setIsShowContent(true), 4000);
     setTimeout(() => setIsLoading(false), 5000);
   });
-
   return (
-    <>
-      {isLoading && <Loading />}
-      {isShowContent && <Component {...pageProps} />}
-    </>
+    <Provider store={store}>
+      <>
+        <App />
+        {isLoading && <Loading />}
+        {isShowContent && <Component {...pageProps} />}
+      </>
+    </Provider>
   );
+}
+
+function App() {
+  const isMenuShown = useSelector((state: RootState) => state.menu);
+  console.log(isMenuShown);
+
+  return <>{isMenuShown && <Menu />}</>;
 }
 
 export default MyApp;

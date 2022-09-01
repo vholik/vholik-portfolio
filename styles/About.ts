@@ -44,7 +44,7 @@ export const AboutStyling = styled(motion.div)`
         font-family: var(--title);
         text-transform: uppercase;
         font-weight: 500;
-        font-size: 8vw;
+        font-size: 4.5vw;
         font-weight: 800;
         margin-top: 4vw;
         color: var(--light);

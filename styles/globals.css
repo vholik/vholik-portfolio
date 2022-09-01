@@ -5,9 +5,9 @@ body {
   font-family: "Neue Haas Grotesk Display Pro", sans-serif;
   font-weight: 500;
 
-  --dark: #1c1c20;
+  --dark: #212121;
   --light: #f1f1f1;
-  --title: "Druk Cyr", sans-serif;
+  --title: "Druk Wide", sans-serif;
   background-color: var(--dark);
 }
 

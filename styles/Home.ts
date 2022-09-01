@@ -1,6 +1,84 @@
 import styled from "styled-components";
 import { motion } from "framer-motion";
 
+export const MenuStyling = styled.div`
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--dark);
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100vh;
+  .container {
+    position: relative;
+  }
+  .menu-inner {
+    .menu-button {
+      padding-bottom: 20px;
+      padding-top: 20px;
+      position: fixed;
+      top: 30px;
+      right: 100px;
+      cursor: pointer;
+
+      .line {
+        top: 100px;
+        height: 1px;
+        width: 52px;
+        background-color: var(--light);
+      }
+      .line:nth-child(1) {
+        transform: rotate(45deg);
+      }
+      .line:nth-child(2) {
+        transform: rotate(-45deg);
+      }
+    }
+    .social-wrapper {
+      position: fixed;
+      display: flex;
+      bottom: 45px;
+      right: 100px;
+      flex-direction: column;
+      .social-link {
+        cursor: pointer;
+        color: var(--light);
+        font-size: 21px;
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+    .link-wrapper {
+      display: flex;
+      flex-direction: column;
+      .link {
+        font-family: var(--title);
+        cursor: pointer;
+        padding-bottom: 25px;
+        font-size: 96px;
+        color: var(--light);
+        transition: transform 0.2s ease, color 0.2s ease;
+        &:hover {
+          color: #858585;
+          transform: translateX(10px);
+        }
+      }
+    }
+    .contact-link {
+      position: fixed;
+      bottom: 45px;
+      color: var(--light);
+      font-size: 18px;
+      text-decoration: underline;
+    }
+  }
+`;
+
 export const LoadingStyling = styled.div`
   position: fixed;
   top: 0;
@@ -121,7 +199,7 @@ export const HomeStyling = styled(motion.div)`
         font-family: var(--title);
         text-transform: uppercase;
         font-weight: 500;
-        font-size: 8vw;
+        font-size: 4.5vw;
         font-weight: 800;
         margin-top: 4vw;
         color: var(--light);
@@ -214,7 +292,7 @@ export const HomeStyling = styled(motion.div)`
         }
       }
       &__title {
-        font-size: 96px;
+        font-size: 41px;
         font-family: var(--title);
         text-transform: uppercase;
         font-weight: 500;
@@ -242,9 +320,12 @@ export const HomeStyling = styled(motion.div)`
         justify-content: space-between;
         cursor: pointer;
         position: relative;
-
+        background-position: center;
+        background-size: 100%;
+        background-repeat: no-repeat;
+        transition: background-size 0.4s ease;
         &:hover {
-          backdrop-filter: blur(10px);
+          background-size: 105%;
         }
         &:hover .case__title {
           opacity: 1;
@@ -255,9 +336,9 @@ export const HomeStyling = styled(motion.div)`
         &__title {
           transition: 0.3s ease;
           opacity: 0;
-          font-size: 64px;
+          font-size: 41px;
           text-align: center;
-          font-weight: 800;
+          font-weight: 400;
           font-family: var(--title);
         }
         .tags-wrapper {
@@ -271,6 +352,7 @@ export const HomeStyling = styled(motion.div)`
             color: var(--light);
             border: 1px solid var(--light);
             font-size: 16px;
+            font-weight: 500;
             padding: 8px 16px;
             font-family: "Neue Haas Grotesk Display Pro";
           }
@@ -286,7 +368,7 @@ export const HomeStyling = styled(motion.div)`
     font-family: var(--title);
     text-transform: uppercase;
     font-weight: 500;
-    font-size: 8vw;
+    font-size: 4.5vw;
     font-weight: 800;
     &__hidden-text {
       opacity: 0.3;
@@ -312,7 +394,7 @@ export const FooterStyling = styled.div`
     border-radius: 10vw !important;
     padding-bottom: 200px;
     &__title {
-      font-size: 96px;
+      font-size: 64px;
       font-weight: 500;
       font-family: var(--title);
       text-transform: uppercase;
@@ -364,7 +446,7 @@ export const FooterStyling = styled.div`
     padding-bottom: 50px;
 
     &__title {
-      font-size: 96px;
+      font-size: 64px;
       font-weight: 500;
       color: var(--dark);
       font-family: var(--title);
@@ -390,7 +472,7 @@ export const FooterStyling = styled.div`
     }
     .footer-bottom {
       color: var(--dark);
-      font-size: 14px;
+      font-size: 16px;
       margin-top: 200px;
     }
   }

@@ -11,6 +11,7 @@ gsap.registerPlugin(ScrollTrigger);
 import Link from "next/link";
 import Header from "./components/Header";
 import cases from "../cases";
+import { useDispatch } from "react-redux";
 
 function Home() {
   const highlightSection = useRef(null);
@@ -151,9 +152,6 @@ function Home() {
                     key={index}
                     style={{
                       backgroundImage: `url(${work.images[0].src})`,
-                      backgroundPosition: "center",
-                      backgroundSize: "cover",
-                      backgroundRepeat: "no-repeat",
                     }}
                   >
                     <div className="tags-wrapper">
