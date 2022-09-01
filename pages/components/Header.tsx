@@ -1,7 +1,7 @@
 import Link from "next/link";
 import { useDispatch } from "react-redux";
 import { HomeStyling } from "../../styles/Home";
-import { showMenu } from "../redux/appSlice";
+import { showMenu } from "../../redux/appSlice";
 
 function Header() {
   const dispatch = useDispatch();

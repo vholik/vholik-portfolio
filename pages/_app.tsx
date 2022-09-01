@@ -5,11 +5,11 @@ import { useEffect, useState } from "react";
 import { LoadingStyling, MenuStyling } from "../styles/Home";
 import "../public/fonts/font1/stylesheet.css";
 import "../public/fonts/font2/stylesheet.css";
-import { store } from "./redux/store";
+import { store } from "../redux/store";
 import { Provider } from "react-redux";
 import { useDispatch, useSelector } from "react-redux";
-import type { RootState } from "./redux/store";
-import { showMenu } from "./redux/appSlice";
+import type { RootState } from "../redux/store";
+import { showMenu } from "../redux/appSlice";
 
 function Loading() {
   const [dots, setDots] = useState(0);
