@@ -2,12 +2,15 @@ html,
 body {
   padding: 0;
   margin: 0;
-  font-family: "Neue Haas Grotesk Display Pro", sans-serif;
-  font-weight: 500;
+  font-family: "Circular Air Light", serif;
+  font-weight: 400;
 
-  --dark: #212121;
-  --light: #f1f1f1;
+  /* --dark: #212121; */
+  --dark: rgb(16, 16, 16);
+  /* --light: #f1f1f1; */
+  --light: white;
   --title: "Druk Wide", sans-serif;
+  --primary: #dbff00;
   background-color: var(--dark);
 }
 
@@ -23,5 +26,24 @@ a {
 }
 
 .container {
-  padding: 0px 100px;
+  padding: 0px 70px;
+}
+
+.button {
+  cursor: pointer;
+  width: fit-content;
+  font-size: 23px !important;
+  font-family: "Circular Air Light", serif;
+  color: var(--light);
+  background-color: transparent;
+  padding: 8px 23px;
+  text-decoration: none !important;
+  border: none;
+  border: 1px solid var(--light);
+  border-radius: 35px;
+  transition: background 0.3s linear, color 0.3s linear;
+}
+.button:hover {
+  background-color: var(--light);
+  color: var(--black) !important;
 }

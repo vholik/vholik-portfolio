@@ -74,19 +74,25 @@ function Home() {
       <main ref={introSection}>
         <video className="video-wrapper" autoPlay loop muted>
           <source
-            src="https://vholik-portfolio.vercel.app/tunel.mp4"
+            src="https://d2pas86kykpvmq.cloudfront.net/videos/loops/other/webm/bg-video-2.webm?versionId=YpPBr1LmJbnZukvzFtwd.V6i4i5hyS6A"
             type="video/mp4"
           />
         </video>
         <Header />
         <div className="main">
           <div className="container">
-            <h1 className="main__title">
-              Engeering aesthetics of digital world
-            </h1>
+            <div className="main__title">
+              Viktor is a software engineer specializing in
+              <span className="highlight"> front-end development. </span>He
+              builds and designs web-applications for business.
+            </div>
+            <div className="button-wrapper">
+              <button className="button">Hire me</button>
+              <button className="button">LinkedIn</button>
+            </div>
           </div>
         </div>
-        <div className="navbar">
+        {/* <div className="navbar">
           <div className="container">
             <div className="navbar__wrapper">
               <div className="navbar-item">
@@ -117,17 +123,15 @@ function Home() {
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
       </main>
       {/* About */}
       <section id="body">
         <div className="about">
           <div className="container">
             <h1 className="about__text">
-              Hello, world! I&rsquo;m Viktor Holik, a developer specializing in
-              React and user interface design. I enjoy creating meaningful
-              narratives through smart design and experimenting with new
-              technologies
+              A 17-years old developer with a sense of company strategy and an
+              adaptive approach to problem solving.
             </h1>
             <div className="about__link">
               <p>More about me</p>
@@ -167,7 +171,7 @@ function Home() {
               ))}
             </div>
             <Link href="/works">
-              <button className="all-works-btn">All works</button>
+              <button className="all-works-btn button">All works</button>
             </Link>
           </div>
         </div>

@@ -57,7 +57,7 @@ export const MenuStyling = styled.div`
       display: flex;
       flex-direction: column;
       .link {
-        font-family: var(--title);
+        font-family: "Circular Air Light", serif;
         cursor: pointer;
         padding-bottom: 25px;
         font-size: 96px;
@@ -141,19 +141,28 @@ export const LoadingStyling = styled.div`
 export const HomeStyling = styled(motion.div)`
   main {
     height: 100vh;
-    /* box-shadow: inset 0px 0px 277px 3px var(--dark); */
     background-repeat: no-repeat;
     z-index: 0;
     background-size: cover;
-    padding: 25px 0 150px 0;
+    padding: 25px 0 50px 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
+    .button-wrapper {
+      display: flex;
+      justify-content: end;
+      gap: 25px;
+    }
+    .main-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100vh;
+    }
     video {
-      /* filter: blur(10px); */
       object-fit: cover;
-      opacity: 0.6;
+      opacity: 0.3;
       position: absolute;
       top: 0;
       z-index: -10;
@@ -196,13 +205,29 @@ export const HomeStyling = styled(motion.div)`
     }
     .main {
       &__title {
-        font-family: var(--title);
-        text-transform: uppercase;
-        font-weight: 500;
-        font-size: 4.5vw;
-        font-weight: 800;
-        margin-top: 4vw;
+        /* font-family: var(--title); */
+        font-size: 54px;
+        font-family: "Circular Air Light", serif;
         color: var(--light);
+        width: 50%;
+        .highlight {
+          text-decoration: underline;
+          color: var(--light) !important;
+        }
+        &__line {
+          width: 60%;
+          height: 1px;
+          border-top: 1px solid var(--light);
+          opacity: 0.6;
+        }
+        &__inner {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+        .last-text-line {
+          text-align: end;
+        }
       }
     }
     .navbar {
@@ -237,15 +262,16 @@ export const HomeStyling = styled(motion.div)`
   .about {
     padding-top: 200px;
     &__text {
-      font-size: 64px;
+      font-size: 54px;
+      width: 60%;
       color: var(--light);
-      font-weight: 500;
+      font-weight: 400;
     }
     &__link {
       display: flex;
       gap: 10px;
       color: var(--light);
-      font-size: 21px;
+      font-size: 16px;
       margin-top: 45px;
       cursor: pointer;
       transition: gap 0.1s ease;
@@ -258,16 +284,15 @@ export const HomeStyling = styled(motion.div)`
     margin-top: 200px;
     color: var(--light);
     .all-works-btn {
-      font-weight: 500;
       display: block;
       margin: 45px auto 0 auto;
-      border-radius: 20px;
+      border-radius: 35px;
       background-color: transparent;
       color: var(--light);
       border: 1px solid var(--light);
-      font-size: 21px;
+      font-size: 23px;
       padding: 8px 16px;
-      font-family: "Neue Haas Grotesk Display Pro";
+      font-family: "Circular Air Light", serif;
       cursor: pointer;
       transition: background 0.2s linear;
       &:hover {
@@ -292,11 +317,8 @@ export const HomeStyling = styled(motion.div)`
         }
       }
       &__title {
-        font-size: 41px;
-        font-family: var(--title);
-        text-transform: uppercase;
-        font-weight: 500;
-        font-weight: 800;
+        font-size: 54px;
+        /* text-transform: uppercase; */
       }
     }
     .work-wrapper {
@@ -339,7 +361,7 @@ export const HomeStyling = styled(motion.div)`
           font-size: 41px;
           text-align: center;
           font-weight: 400;
-          font-family: var(--title);
+          font-family: "Circular Air Light", serif;
         }
         .tags-wrapper {
           transition: 0.3s ease;
@@ -354,7 +376,7 @@ export const HomeStyling = styled(motion.div)`
             font-size: 16px;
             font-weight: 500;
             padding: 8px 16px;
-            font-family: "Neue Haas Grotesk Display Pro";
+            font-family: "Circular Air Light", serif;
           }
         }
       }
@@ -362,14 +384,12 @@ export const HomeStyling = styled(motion.div)`
   }
   .animated-text {
     color: var(--light);
-    font-weight: 500;
+    font-weight: 400;
     margin-top: 200px;
-    width: 80%;
-    font-family: var(--title);
-    text-transform: uppercase;
-    font-weight: 500;
-    font-size: 4.5vw;
-    font-weight: 800;
+    width: 70%;
+    font-family: "Circular Air Light", serif;
+    /* text-transform: uppercase; */
+    font-size: 7vw;
     &__hidden-text {
       opacity: 0.3;
     }
@@ -394,23 +414,21 @@ export const FooterStyling = styled.div`
     border-radius: 10vw !important;
     padding-bottom: 200px;
     &__title {
-      font-size: 64px;
-      font-weight: 500;
-      font-family: var(--title);
-      text-transform: uppercase;
-      font-weight: 500;
-      font-weight: 800;
+      font-size: 54px;
+      font-family: "Circular Air Light", serif;
+      font-weight: 400;
+      width: 60%;
     }
     &__button {
       font-weight: 500;
       margin-top: 45px;
-      border-radius: 20px;
+      border-radius: 35px;
       background-color: transparent;
       color: var(--light);
       border: 1px solid var(--light);
       font-size: 21px;
       padding: 8px 16px;
-      font-family: "Neue Haas Grotesk Display Pro";
+      font-family: "Circular Air Light", serif;
       display: flex;
       align-items: center;
       gap: 10px;
@@ -446,13 +464,10 @@ export const FooterStyling = styled.div`
     padding-bottom: 50px;
 
     &__title {
-      font-size: 64px;
+      font-size: 54px;
       font-weight: 500;
       color: var(--dark);
-      font-family: var(--title);
-      text-transform: uppercase;
-      font-weight: 500;
-      font-weight: 800;
+      font-family: "Circular Air Light", serif;
     }
     &__inner {
       margin-top: 200px;

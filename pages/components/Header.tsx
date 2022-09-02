@@ -28,11 +28,12 @@ function Header() {
             </div>
             <div className="nav-item nav-wrapper">
               <p className="header__description">
-                Front-end developer based in Poland
+                {/* Front-end developer based in Poland */}
               </p>
-              <p className="menu" onClick={() => dispatch(showMenu())}>
+              {/* <p className="menu" onClick={() => dispatch(showMenu())}>
                 MENU
-              </p>
+              </p> */}
+              <button className="menu button">Get in touch</button>
             </div>
           </div>
         </div>
