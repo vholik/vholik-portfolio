@@ -193,13 +193,21 @@ export const HomeStyling = styled(motion.div)`
             cursor: pointer;
           }
         }
-        .header__description {
-          font-size: 14px;
-        }
         .menu {
-          text-decoration: underline;
-          font-size: 14px;
-          cursor: pointer;
+          padding-bottom: 10px;
+          padding-top: 10px;
+          &:hover .menu-line {
+            background-color: var(--dark);
+          }
+          .menu-line {
+            height: 1px;
+            width: 52px;
+            background-color: var(--light);
+            transition: background 0.3s linear;
+            &:nth-child(2) {
+              margin-top: 10px;
+            }
+          }
         }
       }
     }
@@ -214,50 +222,13 @@ export const HomeStyling = styled(motion.div)`
           text-decoration: underline;
           color: var(--light) !important;
         }
-        &__line {
-          width: 60%;
-          height: 1px;
-          border-top: 1px solid var(--light);
-          opacity: 0.6;
-        }
-        &__inner {
-          display: flex;
-          align-items: center;
-          justify-content: space-between;
-        }
-        .last-text-line {
-          text-align: end;
-        }
-      }
-    }
-    .navbar {
-      .navbar__wrapper {
-        color: var(--light);
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-      }
-      .navbar-item {
-        display: flex;
-        gap: 45px;
-        .about-me {
-          font-size: 1.5vw;
-        }
-        .link {
-          text-decoration: underline;
-          font-size: 1.5vw;
-        }
-        &__header {
-          font-size: 14px;
-          color: rgba(241, 241, 241, 0.6);
-          min-width: fit-content;
-        }
       }
     }
   }
   #body {
     position: relative;
     background-color: var(--dark);
-    border-radius: 100px 100px 0 0;
+    /* border-radius: 100px 100px 0 0; */
   }
   .about {
     padding-top: 200px;

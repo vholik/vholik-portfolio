@@ -7,11 +7,31 @@ export const WorksStyling = styled(motion.div)`
     background-repeat: no-repeat;
     z-index: 0;
     background-size: cover;
-    padding: 25px 0 150px 0;
+    padding: 25px 0 50px 0;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     position: relative;
+    .button-wrapper {
+      display: flex;
+      justify-content: end;
+      gap: 25px;
+    }
+    .main-wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      height: 100vh;
+    }
+    video {
+      object-fit: cover;
+      opacity: 0.3;
+      position: absolute;
+      top: 0;
+      z-index: -10;
+      min-width: 100%;
+      height: 100%;
+    }
     .header {
       &__inner {
         display: grid;
@@ -36,47 +56,33 @@ export const WorksStyling = styled(motion.div)`
             cursor: pointer;
           }
         }
-        .header__description {
-          font-size: 14px;
-        }
         .menu {
-          text-decoration: underline;
-          font-size: 14px;
-          cursor: pointer;
+          padding-bottom: 10px;
+          padding-top: 10px;
+          &:hover .menu-line {
+            background-color: var(--dark);
+          }
+          .menu-line {
+            height: 1px;
+            width: 52px;
+            background-color: var(--light);
+            transition: background 0.3s linear;
+            &:nth-child(2) {
+              margin-top: 10px;
+            }
+          }
         }
       }
     }
     .main {
       &__title {
-        font-family: var(--title);
-        text-transform: uppercase;
-        font-weight: 500;
-        font-size: 4.5vw;
-        font-weight: 800;
-        margin-top: 4vw;
+        font-size: 54px;
+        font-family: "Circular Air Light", serif;
         color: var(--light);
-      }
-    }
-    .navbar {
-      .navbar__wrapper {
-        color: var(--light);
-        display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
-      }
-      .navbar-item {
-        display: flex;
-        gap: 45px;
-        .about-me {
-          font-size: 1.5vw;
-        }
-        .link {
+        width: 50%;
+        .highlight {
           text-decoration: underline;
-          font-size: 1.5vw;
-        }
-        &__header {
-          font-size: 14px;
-          color: rgba(241, 241, 241, 0.6);
-          min-width: fit-content;
+          color: var(--light) !important;
         }
       }
     }
@@ -126,7 +132,7 @@ export const WorksStyling = styled(motion.div)`
             }
           }
           .case-title {
-            font-family: var(--title);
+            font-family: "Circular Air Light", serif;
             text-transform: uppercase;
             font-size: 41px;
             font-weight: 800;

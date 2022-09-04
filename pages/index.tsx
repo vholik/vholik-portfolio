@@ -87,43 +87,19 @@ function Home() {
               builds and designs web-applications for business.
             </div>
             <div className="button-wrapper">
-              <button className="button">Hire me</button>
-              <button className="button">LinkedIn</button>
+              <a href="mailto:1viktorholik@gmail.com?subject=Hey Viktor, I want to propose you a work">
+                <button className="button">hire me</button>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/viktorholik/"
+                target="_blank"
+                rel="noreferrer"
+              >
+                <button className="button">linkedIn</button>
+              </a>
             </div>
           </div>
         </div>
-        {/* <div className="navbar">
-          <div className="container">
-            <div className="navbar__wrapper">
-              <div className="navbar-item">
-                <p className="link">(Hire me)</p>
-              </div>
-              <div className="navbar-item">
-                <p className="navbar-item__header">Contact me</p>
-                <div className="right">
-                  <a href="mailto:1viktorholik@gmail.com">
-                    <p className="link">1viktorholik@gmail.com</p>
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/in/viktorholik/"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <p className="link">linked in</p>
-                  </a>
-                </div>
-              </div>
-              <div className="navbar-item">
-                <p className="navbar-item__header">About me</p>
-                <div className="right">
-                  <p className="about-me">
-                    Front-end developer with experience in React + Redux
-                  </p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div> */}
       </main>
       {/* About */}
       <section id="body">
@@ -133,20 +109,24 @@ function Home() {
               A 17-years old developer with a sense of company strategy and an
               adaptive approach to problem solving.
             </h1>
-            <div className="about__link">
-              <p>More about me</p>
-              <Image src={ArrowRight} height={25} width={25} alt="Arrow" />
-            </div>
+            <Link href={"/about"}>
+              <div className="about__link">
+                <p>More about me</p>
+                <Image src={ArrowRight} height={25} width={25} alt="Arrow" />
+              </div>
+            </Link>
           </div>
         </div>
         <div className="work">
           <div className="container">
             <div className="header">
               <div className="header__title">(Recent work)</div>
-              <div className="header__link">
-                <p>See all</p>
-                <Image src={ArrowRight} height={25} width={25} alt="Arrow" />
-              </div>
+              <Link href={"/about"}>
+                <div className="header__link">
+                  <p>See all</p>
+                  <Image src={ArrowRight} height={25} width={25} alt="Arrow" />
+                </div>
+              </Link>
             </div>
             <div className="work-wrapper">
               {cases.slice(0, 3).map((work, index) => (

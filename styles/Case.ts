@@ -11,7 +11,7 @@ export const CaseStyling = styled(motion.div)`
     }
   }
   .header {
-    margin-top: 25px;
+    padding-top: 25px;
     &__inner {
       display: grid;
       color: var(--light);
@@ -31,14 +31,25 @@ export const CaseStyling = styled(motion.div)`
         align-items: center;
         gap: 15px;
         font-size: 14px;
-      }
-      .header__description {
-        font-size: 14px;
+        .nav-link {
+          cursor: pointer;
+        }
       }
       .menu {
-        text-decoration: underline;
-        cursor: pointer;
-        font-size: 14px;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        &:hover .menu-line {
+          background-color: var(--dark);
+        }
+        .menu-line {
+          height: 1px;
+          width: 52px;
+          background-color: var(--light);
+          transition: background 0.3s linear;
+          &:nth-child(2) {
+            margin-top: 10px;
+          }
+        }
       }
     }
   }
@@ -48,10 +59,10 @@ export const CaseStyling = styled(motion.div)`
     justify-content: space-between;
     align-items: center;
     .case-title {
-      font-family: var(--title);
+      font-family: "Circular Air Light", serif;
       text-transform: uppercase;
       font-weight: 500;
-      font-size: 120px;
+      font-size: 96px;
       font-weight: 800;
       color: var(--light);
     }

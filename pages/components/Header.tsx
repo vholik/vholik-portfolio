@@ -33,7 +33,13 @@ function Header() {
               {/* <p className="menu" onClick={() => dispatch(showMenu())}>
                 MENU
               </p> */}
-              <button className="menu button">Get in touch</button>
+              <button
+                className="menu button"
+                onClick={() => dispatch(showMenu())}
+              >
+                <div className="menu-line"></div>
+                <div className="menu-line"></div>
+              </button>
             </div>
           </div>
         </div>

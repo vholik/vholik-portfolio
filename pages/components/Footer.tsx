@@ -62,8 +62,8 @@ function Footer() {
                   rel="noreferrer"
                 >
                   <p className="nav-link">
-                    via: <span className="link">linked in</span>
-                  </p>{" "}
+                    link: <span className="link">linked in</span>
+                  </p>
                 </a>
               </div>
               <div className="col">
@@ -77,16 +77,31 @@ function Footer() {
               </div>
               <div className="col">
                 <p className="nav-link">
-                  <span className="link">Behance</span>
+                  <a
+                    href="https://www.linkedin.com/in/viktorholik/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span className="link">LinkedIn</span>
+                  </a>
                 </p>
                 <p className="nav-link">
-                  <span className="link">Instagram</span>
+                  <a
+                    href="https://github.com/vholik"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span className="link">Github</span>
+                  </a>
                 </p>
                 <p className="nav-link">
-                  <span className="link">Facebook</span>
-                </p>
-                <p className="nav-link">
-                  <span className="link">LinkedIn</span>
+                  <a
+                    href="https://www.instagram.com/imzape/"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <span className="link">Instagram</span>
+                  </a>
                 </p>
               </div>
             </div>
