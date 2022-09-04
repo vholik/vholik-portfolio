@@ -109,6 +109,7 @@ export const WorksStyling = styled(motion.div)`
             border-radius: 30px;
             height: 500px;
             width: 100%;
+            background-size: cover;
           }
         }
         .right {
@@ -138,6 +139,7 @@ export const WorksStyling = styled(motion.div)`
             font-weight: 800;
             margin-top: 25px;
             color: var(--light);
+            cursor: pointer;
           }
         }
       }

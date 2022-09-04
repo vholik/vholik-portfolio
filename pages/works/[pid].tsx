@@ -59,7 +59,7 @@ function Case() {
       </div>
       <div className="container">
         <div className="cases-wrapper">
-          {currentCase.images.map((work, index) => (
+          {currentCase.images.slice(1, -1).map((work, index) => (
             <div className="case" key={index}>
               <Image src={work} alt="Work" />
             </div>

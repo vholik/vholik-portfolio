@@ -305,8 +305,6 @@ export const HomeStyling = styled(motion.div)`
       }
       .case {
         height: 700px;
-        background-color: #2c2c2c;
-        border-radius: 30px;
         padding: 35px 25px;
         display: flex;
         flex-direction: column;
@@ -314,11 +312,29 @@ export const HomeStyling = styled(motion.div)`
         cursor: pointer;
         position: relative;
         background-position: center;
-        background-size: 100%;
+        background-size: cover;
         background-repeat: no-repeat;
-        transition: background-size 0.4s ease;
+        z-index: 1;
+        .case-image {
+          border-radius: 30px;
+          z-index: -1;
+          background-position: center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          content: "";
+          position: absolute;
+          top: 0px;
+          right: 0px;
+          bottom: 0px;
+          left: 0px;
+          opacity: 1;
+          transition: opacity 0.2s linear;
+          &:hover {
+            opacity: 0.6;
+          }
+        }
         &:hover {
-          background-size: 105%;
+          backdrop-filter: blur(10px);
         }
         &:hover .case__title {
           opacity: 1;

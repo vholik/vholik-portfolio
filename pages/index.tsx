@@ -131,13 +131,7 @@ function Home() {
             <div className="work-wrapper">
               {cases.slice(0, 3).map((work, index) => (
                 <Link href={`/works/${work.id}`} key={index}>
-                  <div
-                    className="case"
-                    key={index}
-                    style={{
-                      backgroundImage: `url(${work.images[0].src})`,
-                    }}
-                  >
+                  <div className="case" key={index}>
                     <div className="tags-wrapper">
                       {work.tags.map((tag, index) => (
                         <button className="tag" key={index}>
@@ -146,6 +140,12 @@ function Home() {
                       ))}
                     </div>
                     <h2 className="case__title">{work.name}</h2>
+                    <span
+                      className="case-image"
+                      style={{
+                        backgroundImage: `url(${work.images[0].src})`,
+                      }}
+                    ></span>
                   </div>
                 </Link>
               ))}
