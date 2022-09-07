@@ -10,6 +10,7 @@ import { Provider } from "react-redux";
 import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "../redux/store";
 import { showMenu } from "../redux/appSlice";
+import Link from "next/link";
 
 function Loading() {
   const [dots, setDots] = useState(0);
@@ -59,9 +60,21 @@ const Menu = () => {
               <div className="line"></div>
             </div>
             <div className="link-wrapper">
-              <span className="link">HOME</span>
-              <span className="link">ABOUT</span>
-              <span className="link">WORKS</span>
+              <Link href={"/"}>
+                <span className="link" onClick={() => dispatch(showMenu())}>
+                  HOME
+                </span>
+              </Link>
+              <Link href={"/about"}>
+                <span className="link" onClick={() => dispatch(showMenu())}>
+                  ABOUT
+                </span>
+              </Link>
+              <Link href={"/works"}>
+                <span className="link" onClick={() => dispatch(showMenu())}>
+                  WORKS
+                </span>
+              </Link>
             </div>
             <p className="contact-link">Lets work together</p>
             <div className="social-wrapper">

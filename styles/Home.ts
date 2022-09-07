@@ -91,6 +91,9 @@ export const MenuStyling = styled.div`
     }
   }
   @media (max-width: 500px) {
+    .link {
+      font-size: 28px !important;
+    }
     .social-wrapper {
       display: none !important;
     }
@@ -133,7 +136,7 @@ export const LoadingStyling = styled.div`
     animation: lastDotAnim 1s linear;
   }
   .dot {
-    font-size: 96px;
+    font-size: 5vw;
     color: var(--light);
     span {
       animation: dotAnim 1s linear;
@@ -142,7 +145,7 @@ export const LoadingStyling = styled.div`
   p {
     display: flex;
     padding: 23px;
-    font-size: 96px;
+    font-size: 5vw;
     color: var(--light);
   }
 
