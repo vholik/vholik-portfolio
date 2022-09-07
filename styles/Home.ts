@@ -42,7 +42,7 @@ export const MenuStyling = styled.div`
       position: fixed;
       display: flex;
       bottom: 45px;
-      right: 100px;
+      right: 75px;
       flex-direction: column;
       .social-link {
         cursor: pointer;
@@ -59,6 +59,7 @@ export const MenuStyling = styled.div`
       .link {
         font-family: "Circular Air Light", serif;
         cursor: pointer;
+        width: fit-content;
         padding-bottom: 25px;
         font-size: 96px;
         color: var(--light);
@@ -75,6 +76,23 @@ export const MenuStyling = styled.div`
       color: var(--light);
       font-size: 18px;
       text-decoration: underline;
+    }
+  }
+  @media (max-width: 1000px) {
+    .social-wrapper {
+      right: 5% !important;
+    }
+    .link {
+      font-size: 64px !important;
+    }
+    .menu-button {
+      top: 5% !important;
+      right: 5% !important;
+    }
+  }
+  @media (max-width: 500px) {
+    .social-wrapper {
+      display: none !important;
     }
   }
 `;
@@ -115,7 +133,7 @@ export const LoadingStyling = styled.div`
     animation: lastDotAnim 1s linear;
   }
   .dot {
-    font-size: 120px;
+    font-size: 96px;
     color: var(--light);
     span {
       animation: dotAnim 1s linear;
@@ -124,7 +142,7 @@ export const LoadingStyling = styled.div`
   p {
     display: flex;
     padding: 23px;
-    font-size: 120px;
+    font-size: 96px;
     color: var(--light);
   }
 
@@ -165,6 +183,9 @@ export const HomeStyling = styled(motion.div)`
       opacity: 0.3;
       position: absolute;
       top: 0;
+      right: 0;
+      left: 0;
+      bottom: 0;
       z-index: -10;
       min-width: 100%;
       height: 100%;
@@ -383,9 +404,97 @@ export const HomeStyling = styled(motion.div)`
   }
   .cover {
     width: 100%;
-    height: 800px;
+    height: 70vh;
     background-color: #2c2c2c;
     margin-top: 200px;
+  }
+  @media (max-width: 1500px) {
+    .main__title {
+      font-size: 41px !important;
+      width: 60%;
+    }
+    .about__text {
+      font-size: 41px !important;
+      width: 80%;
+    }
+    .header__title {
+      font-size: 41px !important;
+    }
+  }
+  @media (max-width: 1300px) {
+    .nav {
+      opacity: 0;
+      pointer-events: none;
+    }
+    .case {
+      height: 500px !important;
+      &__title {
+        font-size: 28px !important;
+      }
+    }
+  }
+  @media (max-width: 1000px) {
+    .animated-text {
+      font-size: 8vw;
+      width: 80%;
+    }
+    .main__title {
+      font-size: 36px !important;
+      width: 80% !important;
+      margin-bottom: 45px;
+    }
+    .about__text {
+      font-size: 36px !important;
+      width: 100%;
+    }
+    .button-wrapper {
+      justify-content: left !important;
+    }
+    .case {
+      padding: 25px 15px !important ;
+      height: 400px !important;
+      grid-column-start: 1 !important;
+      grid-column-end: 3 !important;
+    }
+  }
+  @media (max-width: 600px) {
+    .header__title {
+      font-size: 36px !important;
+    }
+    .main__title {
+      width: 100% !important;
+    }
+    main {
+      justify-content: none;
+    }
+    .header__link {
+      display: none !important;
+    }
+    .animated-text {
+      font-size: 10vw;
+      width: 80%;
+    }
+  }
+  @media (max-width: 500px) {
+    .logo {
+      width: 50% !important;
+    }
+    .header__inner {
+      display: flex !important;
+      justify-content: space-between;
+    }
+    .main__title {
+      font-size: 28px !important;
+    }
+    .nav {
+      display: none !important;
+    }
+    .about__text {
+      font-size: 28px !important;
+    }
+    .animated-text {
+      font-size: 14vw;
+    }
   }
 `;
 
@@ -459,6 +568,7 @@ export const FooterStyling = styled.div`
     &__inner {
       margin-top: 200px;
       display: grid;
+      grid-column-gap: 45px;
       grid-template-columns: repeat(3, 1fr);
     }
     .col {
@@ -476,6 +586,37 @@ export const FooterStyling = styled.div`
       color: var(--dark);
       font-size: 16px;
       margin-top: 200px;
+    }
+  }
+  @media (max-width: 1150px) {
+    .hire-me__inner {
+      display: block;
+      .right {
+        margin-top: 25px;
+      }
+      .hire-me__title {
+        font-size: 41px;
+        width: 80%;
+      }
+    }
+    .footer__title {
+      font-size: 41px;
+    }
+    .footer__inner {
+      margin-top: 150px;
+      display: block;
+      .col {
+        margin-bottom: 45px;
+      }
+    }
+  }
+
+  @media (max-width: 700px) {
+    a {
+      font-size: 18px !important;
+    }
+    .col__title {
+      font-size: 36px;
     }
   }
 `;

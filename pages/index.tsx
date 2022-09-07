@@ -121,7 +121,7 @@ function Home() {
           <div className="container">
             <div className="header">
               <div className="header__title">(Recent work)</div>
-              <Link href={"/about"}>
+              <Link href={"/works"}>
                 <div className="header__link">
                   <p>See all</p>
                   <Image src={ArrowRight} height={25} width={25} alt="Arrow" />

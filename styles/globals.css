@@ -17,7 +17,7 @@ body {
   margin: 0;
   font-family: "Circular Air Light", serif;
   font-weight: 400;
-
+  overflow-x: hidden;
   /* --dark: #212121; */
   --dark: rgb(16, 16, 16);
   /* --light: #f1f1f1; */
@@ -59,4 +59,16 @@ a {
 .button:hover {
   background-color: var(--light);
   color: var(--black) !important;
+}
+
+@media (max-width: 1000px) {
+  .container {
+    padding: 0px 5%;
+  }
+}
+
+@media (max-width: 500px) {
+  .button {
+    font-size: 18px !important;
+  }
 }
