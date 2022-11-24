@@ -1,0 +1,342 @@
+body {
+  --dark: #0e0e0e;
+  --light: #ffffff;
+
+  --grey-60: rgba(255, 255, 255, 0.6);
+  --grey-30: rgba(255, 255, 255, 0.3);
+  // --font: "Arial", sans-serif;
+  // --font: "Neue Haas Grotesk Display Pro", sans-serif;
+  --font: "Basis Grotesque Pro", sans-serif;
+  // letter-spacing: -0.04em;
+  font-weight: 400;
+  background-color: var(--dark);
+  color: var(--light);
+  font-size: 12px;
+  margin: 0 50px;
+  overflow-x: hidden;
+  font-family: var(--font);
+}
+
+// .decorated {
+//   font-family: "Arsenica Trial";
+// }
+
+* {
+  text-transform: uppercase;
+  line-height: 125%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-weight: 400;
+}
+
+.section-name {
+  font-size: 0.8vw;
+  color: var(--grey-60);
+  padding-right: 15vw;
+}
+
+.section-carousel {
+  border-top: 1px solid var(--grey-30);
+  border-bottom: 1px solid var(--grey-30);
+
+  &__inner {
+    width: max-content;
+    display: flex;
+    align-items: center;
+    gap: 100px;
+    padding: 50px 0;
+    transform: translateX(-400px);
+  }
+  &__text {
+    font-size: 10vw;
+    text-transform: uppercase;
+  }
+  .dot {
+    width: 20px;
+    height: 20px;
+    background-color: var(--light);
+    border-radius: 50%;
+  }
+}
+
+// Layout
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  .nav-wrapper {
+    display: flex;
+    list-style: none;
+    .nav-link {
+      margin-left: 50px;
+      font-size: 14px;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.webglholder {
+  position: absolute;
+}
+
+.main {
+  padding-top: 25px;
+  height: 100vh;
+  position: relative;
+}
+
+.line {
+  overflow: hidden;
+  &:nth-child(2) {
+    margin-left: 200px;
+  }
+  &:nth-child(3) {
+    margin-left: 50px;
+  }
+}
+
+.hero {
+  display: flex;
+  text-transform: uppercase;
+  margin-top: 50px;
+  .hero-subtitle {
+    font-size: 0.8vw;
+    margin-left: 200px;
+  }
+  .hero-title {
+    font-size: 5vw;
+  }
+}
+
+.hero-bottom {
+  position: absolute;
+  bottom: 50px;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-column-gap: 60px;
+  width: 100%;
+  align-items: center;
+  &__location {
+    grid-column: 4;
+  }
+  &__link {
+    display: flex;
+    justify-content: end;
+    img {
+      width: 25px;
+      height: fit-content;
+    }
+    .link-inner {
+      display: flex;
+      gap: 10px;
+      align-items: center;
+      &:hover {
+        text-decoration: underline;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.about {
+  margin-top: 100px;
+  .about-start {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 60px;
+  }
+  .about-text {
+    grid-column: 1/4;
+    font-size: 2.5vw;
+  }
+  .photo {
+    height: 40vw;
+    background-color: var(--grey-30);
+    grid-column: 4/6;
+  }
+
+  .directions {
+    margin-top: 300px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-column-gap: 60px;
+    .directions-text {
+      grid-column: 2;
+      display: flex;
+      flex-direction: column;
+      gap: 50px;
+      text-transform: uppercase;
+      width: 20vw;
+      font-size: 0.8vw;
+      img {
+        width: 30px;
+      }
+    }
+
+    .skills {
+      margin-top: 300px;
+      grid-column: 2;
+      .skills-title {
+        .section-name {
+          padding-right: 10vw;
+        }
+        font-size: 2vw;
+      }
+    }
+  }
+
+  .table {
+    margin-top: 100px;
+    width: 30vw;
+    .border {
+      border: 1px solid var(--grey-30);
+      margin: 0 auto;
+    }
+    .table-title {
+      font-size: 0.8vw;
+      padding-bottom: 5px;
+      // border-bottom: 1px solid var(--grey-30);
+      position: relative;
+    }
+    .table-list {
+      margin-left: 10vw;
+      list-style: none;
+      .table-item {
+        text-transform: uppercase;
+        padding: 5px 0;
+        // border-bottom: 1px solid var(--grey-30);
+      }
+    }
+  }
+}
+
+.work {
+  margin-top: 300px;
+
+  .work-description {
+    grid-column: 4;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    text-transform: uppercase;
+    width: 20vw;
+    font-size: 1vw;
+    img {
+      width: 30px;
+    }
+  }
+  .row {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-column-gap: 20vw;
+    margin-top: 150px;
+    &:nth-child(3) {
+      .case {
+        &:nth-child(1) {
+          margin-top: 5vw;
+          grid-column: 2/4;
+          .case-image {
+            height: 25vw;
+          }
+        }
+        &:nth-child(2) {
+          grid-column: 4/6;
+          .case-image {
+            height: 30vw;
+          }
+        }
+      }
+    }
+  }
+
+  .case {
+    .case-number {
+      text-align: end;
+    }
+    .case-name {
+      text-transform: uppercase;
+      font-size: 1vw;
+    }
+    .case-image {
+      margin: 5px 0;
+      background-color: var(--grey-30);
+      height: 40vw;
+    }
+
+    &:nth-child(1) {
+      grid-column: 1/4;
+      .case-image {
+        height: 50vw;
+      }
+    }
+    &:nth-child(2) {
+      grid-column: 4/6;
+      .case-image {
+        height: 30vw;
+      }
+    }
+  }
+
+  &__inner {
+    margin-top: 200px;
+  }
+}
+
+.contact {
+  margin-top: 300px;
+  display: flex;
+  flex-direction: column;
+  .contact-subtitle {
+    font-size: 1vw;
+  }
+  .contact-title {
+    margin-top: 25px;
+    font-size: 4vw;
+    text-decoration: underline;
+  }
+  .bottom {
+    border-top: 1px solid white;
+    margin-top: 150px;
+    padding-top: 60px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-column-gap: 60px;
+    padding-bottom: 200px;
+    .col {
+      display: flex;
+      flex-direction: column;
+      a {
+        text-decoration: underline;
+      }
+      &:nth-child(4) {
+        a {
+          color: white;
+        }
+      }
+    }
+    .col-title {
+      font-size: 1vw;
+      margin-bottom: 10px;
+    }
+    .col-link {
+      font-size: 0.9vw;
+      color: var(--grey-60);
+      margin-bottom: 10px;
+    }
+  }
+}
