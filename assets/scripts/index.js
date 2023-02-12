@@ -20,17 +20,17 @@ $(document).ready(function () {
   });
 });
 
-const scrollContainer = document.querySelector("[data-scroll-container]");
+// const scrollContainer = document.querySelector("[data-scroll-container]");
 
-const scroll = new LocomotiveScroll({
-  el: scrollContainer,
-  smooth: true,
-  getDirection: true,
-});
+// const scroll = new LocomotiveScroll({
+//   el: scrollContainer,
+//   smooth: true,
+//   getDirection: true,
+// });
 
-imagesLoaded(scrollContainer, { background: true }, function () {
-  scroll.update();
-});
+// imagesLoaded(scrollContainer, { background: true }, function () {
+//   scroll.update();
+// });
 
 const servicesRows = document.querySelectorAll(".services-wrapper .row");
 
