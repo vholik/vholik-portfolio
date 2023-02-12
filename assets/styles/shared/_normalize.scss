@@ -1,0 +1,152 @@
+@import "./variables";
+
+html {
+  font-size: 16px;
+  font-family: $font;
+}
+
+:root {
+  --margin: 100px;
+}
+
+[data-scroll-container] {
+  perspective: 1px;
+}
+
+body {
+  font-family: $font;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  max-width: 1320px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+ul {
+  list-style: none;
+}
+
+.primary {
+  font-family: $font-primary;
+}
+
+.section-title {
+  font-size: 4rem;
+  font-weight: 400;
+}
+
+h1,
+h2,
+h3 {
+  line-height: 1.05em;
+}
+
+.circle-button {
+  transition: background $transition;
+  min-height: 10rem;
+  min-width: 10rem;
+  max-height: 10rem;
+  max-width: 10rem;
+  background-color: $primary;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  color: $black;
+  border-radius: 50%;
+  cursor: pointer;
+
+  &:hover {
+    background-color: $primary-hover;
+  }
+}
+
+@mixin button {
+  color: $white;
+  display: flex;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.8em 1em;
+  border-radius: 2em;
+  border: 1px solid $stroke-dark;
+  transition: background $transition;
+
+  &:hover {
+    background-color: $black-hover;
+  }
+}
+
+@mixin title-count($content, $color) {
+  position: relative;
+
+  &::before {
+    position: absolute;
+    content: $content;
+    color: $color;
+    font-size: 3rem;
+    left: -10rem;
+    font-family: $font-primary;
+  }
+
+  @media only screen and (max-width: 768px) {
+    &::before {
+      position: static;
+      font-size: 1.5rem;
+      margin-right: 2rem;
+    }
+  }
+}
+
+@media only screen and (max-width: 1500px) {
+  .container {
+    max-width: 1220px;
+  }
+}
+
+@media only screen and (max-width: 1300px) {
+  .container {
+    max-width: 1000px;
+  }
+  .section-title {
+    font-size: 3.5rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  html {
+    font-size: 14px;
+  }
+
+  .container {
+    max-width: 768px;
+  }
+
+  .section-title {
+    font-size: 3rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  :root {
+    --margin: 80px;
+  }
+
+  .container {
+    max-width: 90%;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+}
