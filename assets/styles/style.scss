@@ -132,10 +132,10 @@
         position: relative;
         padding-top: 2rem;
         cursor: pointer;
-        transition: max-height 0.7s ease;
+        transition: max-height 0.4s ease;
 
         img {
-          transition: transform 0.7s ease;
+          transition: transform 0.4s ease;
         }
 
         .right {
@@ -145,7 +145,7 @@
         }
 
         &::before {
-          transition: opacity 0.7s ease;
+          transition: opacity 0.4s ease;
           position: absolute;
           content: "";
           left: 0;
@@ -218,6 +218,11 @@
       justify-self: self-end;
       background-color: transparent;
       border: 2px dotted $stroke;
+      transition: background $transition;
+
+      &:hover {
+        background-color: $white-hover;
+      }
     }
 
     .project {
@@ -432,7 +437,11 @@
     }
 
     .photo {
-      background-color: $black-hover;
+      background-size: cover;
+      background-position: top;
+      background-repeat: no-repeat;
+      // background-color: $black-hover;
+      background-image: url("../images/my-photo.jpg");
       grid-column: 2/3;
       aspect-ratio: 1 / 1.15;
       border-radius: 0.6em;

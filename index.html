@@ -71,12 +71,12 @@
             <p class="menu-btn">MENU</p>
             <ul class="header-list">
               <li>
-                <a href="#">Work</a>
+                <a href="#work">Work</a>
               </li>
               <li>
-                <a href="#">About</a>
+                <a href="#about">About</a>
               </li>
-              <a class="button" href="#"
+              <a class="button" href="mailto:1viktorholik@gmail.com"
                 >Hit me up
                 <img
                   src="./assets/images/arrow-right-white.svg"
@@ -128,17 +128,35 @@
             />
             <div class="services-wrapper">
               <div class="row">
+                <h3 class="field">General</h3>
+                <div class="right">
+                  <ul class="services-list">
+                    <li>UX/UI design</li>
+                    <li>Jest</li>
+                    <li>React Testing Library</li>
+                    <li>Wordpress</li>
+                    <li>Branding</li>
+                  </ul>
+                  <img
+                    src="./assets/images/plus.svg"
+                    alt="Open"
+                    class="open-plus"
+                  />
+                </div>
+              </div>
+              <div class="row">
                 <h3 class="field">Front-end development</h3>
                 <div class="right">
                   <ul class="services-list">
                     <li>HTML5</li>
-                    <li>CSS</li>
+                    <li>CSS3</li>
                     <li>React</li>
-                    <li>Redux Toolkit</li>
+                    <li>Next.js</li>
+                    <li>Typescript</li>
+                    <li>Redux</li>
                     <li>Redux Toolkit</li>
                     <li>React Query</li>
                     <li>Socket.io</li>
-                    <li>Wordpress</li>
                   </ul>
                   <img
                     src="./assets/images/plus.svg"
@@ -151,14 +169,11 @@
                 <h3 class="field">Back-end development</h3>
                 <div class="right">
                   <ul class="services-list">
-                    <li>GSAP</li>
-                    <li>UX/UI Design</li>
-                    <li>Jest</li>
-                    <li>React Testing Library</li>
                     <li>Node.js</li>
-                    <li>PostgreSQL</li>
                     <li>Express.js</li>
                     <li>NestJs</li>
+                    <li>MongoDB</li>
+                    <li>PostgreSQL</li>
                   </ul>
                   <img
                     src="./assets/images/plus.svg"
@@ -178,51 +193,67 @@
               FEATURED <span class="primary">WORKS</span>
             </h2>
             <div class="project">
-              <img
-                class="project-img"
-                src="./assets/images/work/monocode.jpg"
-                alt="Monocode"
-              />
-              <h3 class="project-title">Website development</h3>
-              <p class="project-subtitle">Logistics</p>
+              <a href="https://monocode.pp.ua" target="_blank">
+                <img
+                  class="project-img"
+                  src="./assets/images/work/monocode.jpg"
+                  alt="Monocode"
+                />
+              </a>
+              <h3 class="project-title">
+                UX/UI design, development and branding for digital studio
+              </h3>
+              <p class="project-subtitle">UX/UI, HTML&CSS, Javascript, Java</p>
             </div>
             <div class="project">
               <img
                 class="project-img"
                 src="./assets/images/work/monoshop.jpg"
-                alt="Monocode"
+                alt="Monoshop"
               />
-              <h3 class="project-title">Website development</h3>
-              <p class="project-subtitle">Logistics</p>
+              <h3 class="project-title">
+                Full-stack develpment of clothes marketplace
+              </h3>
+              <p class="project-subtitle">Under production</p>
             </div>
             <div class="project">
-              <img
-                class="project-img"
-                src="./assets/images/work/opal-transport.jpg"
-                alt="Monocode"
-              />
-              <h3 class="project-title">Website development</h3>
-              <p class="project-subtitle">Logistics</p>
+              <a href="https://opaltransport.pl/en" target="_blank">
+                <img
+                  class="project-img"
+                  src="./assets/images/work/opal-transport.jpg"
+                  alt="Opal Transport"
+                />
+              </a>
+              <h3 class="project-title">
+                UX/UI design and development for Opal Transport
+              </h3>
+              <p class="project-subtitle">UX/UI design, HTML&CSS, Javascript</p>
             </div>
             <div class="project">
               <img
                 class="project-img"
                 src="./assets/images/work/polska-unia-transportu.jpg"
-                alt="Monocode"
+                alt="Poslka Unia Transportu"
               />
-              <h3 class="project-title">Website development</h3>
-              <p class="project-subtitle">Logistics</p>
+              <h3 class="project-title">
+                UX/UI design and wordpress development for Poska Unia Transportu
+              </h3>
+              <p class="project-subtitle">Under production</p>
             </div>
             <div class="project">
-              <img
-                class="project-img"
-                src="./assets/images/work/slowbee.jpg"
-                alt="Monocode"
-              />
-              <h3 class="project-title">Website development</h3>
-              <p class="project-subtitle">Logistics</p>
+              <a href="https://slowbee.vercel.app" target="_blank">
+                <img
+                  class="project-img"
+                  src="./assets/images/work/slowbee.jpg"
+                  alt="Slowbee"
+                />
+              </a>
+              <h3 class="project-title">React development of musical app</h3>
+              <p class="project-subtitle">
+                React, Typescript, Next.js, Redux Toolkit
+              </p>
             </div>
-            <a class="circle-button">
+            <a class="circle-button" href="#contact">
               Your project
               <img
                 src="./assets/images/arrow-right-black.svg"
@@ -307,7 +338,7 @@
       </section>
       <div class="page-bottom" data-scroll-section>
         <section id="about" class="about">
-          <div class="about-bg"></div>
+          <!-- <div class="about-bg"></div> -->
           <div class="container">
             <div class="about__inner">
               <div class="section-title">
@@ -338,13 +369,13 @@
           <div class="container">
             <div class="contact__inner">
               <h1 class="section-title">Lets work</h1>
-              <button class="button">
+              <a class="button" href="mailto:1viktorholik@gmail.com">
                 Hit me up
                 <img
                   src="./assets/images/arrow-right-white.svg"
                   alt="Arrow right"
                 />
-              </button>
+              </a>
             </div>
           </div>
         </section>
@@ -352,72 +383,42 @@
           <div class="container">
             <div class="footer__inner">
               <div class="col">
-                <h2 class="col-title">Hello world</h2>
+                <h2 class="col-title">Social links</h2>
                 <ul class="footer-list">
                   <li>
-                    <a href="#">Hello</a>
+                    <a
+                      href="https://www.linkedin.com/in/viktorholik/"
+                      target="_blank"
+                      >LinkedIn</a
+                    >
                   </li>
                   <li>
-                    <a href="#">Hello</a>
+                    <a href="https://t.me/iamzape" target="_blank">Telegram</a>
                   </li>
                   <li>
-                    <a href="#">Hello</a>
+                    <a href="https://github.com/vholik" target="_blank"
+                      >Github</a
+                    >
                   </li>
                 </ul>
               </div>
               <div class="col">
-                <h2 class="col-title">Hello world</h2>
+                <h2 class="col-title">Last projects</h2>
                 <ul class="footer-list">
                   <li>
-                    <a href="#">Hello</a>
+                    <a href="https://opaltransport.pl/en" target="_blank"
+                      >Opal Transport</a
+                    >
                   </li>
                   <li>
-                    <a href="#">Hello</a>
+                    <a href="https://monocode.pp.ua" target="_blank"
+                      >Monocode</a
+                    >
                   </li>
                   <li>
-                    <a href="#">Hello</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col">
-                <h2 class="col-title">Hello world</h2>
-                <ul class="footer-list">
-                  <li>
-                    <a href="#">Hello</a>
-                  </li>
-                  <li>
-                    <a href="#">Hello</a>
-                  </li>
-                  <li>
-                    <a href="#">Hello</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col">
-                <h2 class="col-title">Hello world</h2>
-                <ul class="footer-list">
-                  <li>
-                    <a href="#">Hello</a>
-                  </li>
-                  <li>
-                    <a href="#">Hello</a>
-                  </li>
-                  <li>
-                    <a href="#">Hello</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="col">
-                <h2 class="col-title">Hello world</h2>
-                <ul class="footer-list">
-                  <li>
-                    <a href="#">Hello</a>
-                  </li>
-                  <li>
-                    <a href="#">Hello</a>
-                  </li>
-                  <li>
-                    <a href="#">Hello</a>
+                    <a href="https://slowbee.vercel.app" target="_blank"
+                      >Slowbee</a
+                    >
                   </li>
                 </ul>
               </div>
