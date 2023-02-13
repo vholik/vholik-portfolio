@@ -78,6 +78,7 @@
     .hero-bg {
       margin-top: 1rem;
       width: 100%;
+      height: max-content;
       aspect-ratio: 1 / 0.4;
       grid-column: 1 / 4;
 
@@ -697,9 +698,9 @@
         display: block;
       }
 
-      .hero-bg {
-        aspect-ratio: 1 / 1;
-      }
+      // .hero-bg {
+      //   aspect-ratio: 1 / 1;
+      // }
     }
   }
   .work__inner {

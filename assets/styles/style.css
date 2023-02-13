@@ -336,6 +336,8 @@ h3 {
 .main .hero .hero-bg {
   margin-top: 1rem;
   width: 100%;
+  height: -moz-max-content;
+  height: max-content;
   aspect-ratio: 1/0.4;
   grid-column: 1/4;
 }
@@ -896,9 +898,6 @@ h3 {
   }
   .main .hero .hero-title {
     display: block;
-  }
-  .main .hero .hero-bg {
-    aspect-ratio: 1/1;
   }
   .work__inner {
     display: block;
