@@ -460,7 +460,6 @@
 
     .section-title {
       font-family: $font-primary;
-      text-transform: uppercase;
       font-size: 5rem;
       grid-column: 2/4;
       @include title-count("05", $white);

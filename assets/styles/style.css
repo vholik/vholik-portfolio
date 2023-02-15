@@ -706,7 +706,6 @@ h3 {
 }
 .contact__inner .section-title {
   font-family: "Silk Serif", "sans-serif";
-  text-transform: uppercase;
   font-size: 5rem;
   grid-column: 2/4;
   position: relative;
