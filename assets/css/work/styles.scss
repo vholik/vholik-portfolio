@@ -5,70 +5,60 @@
 @import "../../shared/styles/loading";
 @import "../../shared/styles/menu";
 
-.loop-row {
-  display: flex;
-  width: max-content;
-  align-items: center;
-  font-size: 5vw;
-  gap: 5vw;
-}
-
 .wrapper {
-  overflow: hidden;
-  margin-top: 2rem;
-  height: fit-content;
-  padding: 4rem 2rem;
-  background-color: var(--grey-bg);
-  border-radius: var(--border-radius);
-}
-
-.projects-list {
   margin-top: 2rem;
 
-  li {
-    font-size: 1.2rem;
-    border-bottom: 1px solid var(--stroke);
-    padding-top: 1rem;
-    padding-bottom: 1rem;
-    cursor: pointer;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    position: relative;
+  .image-wrapper {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    height: 400px;
+    pointer-events: none;
+    opacity: 0;
+    z-index: 100;
 
-    &:after {
-      content: "";
-      position: absolute;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      height: 1px;
-      background-color: var(--white);
-      width: 0%;
-      transition: width 0.8s ease;
+    img {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
+  }
 
-    svg {
-      transform: translateX(-20px);
-      position: absolute;
-      transition: transform 0.4s ease;
-    }
+  ul {
+    li {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 2rem 0;
+      border-top: 1px solid var(--stroke);
+      font-size: 2rem;
+      color: var(--grey);
+      cursor: pointer;
+      transition: color 0.4s ease, padding 0.4s ease;
+      position: relative;
 
-    a {
-      color: var(--whtie);
-      transition: transform 0.4s ease;
-    }
-
-    &:hover {
-      &:after {
+      .inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
         width: 100%;
       }
-      a {
-        transform: translateX(30px);
+
+      &:hover {
+        padding-left: 1rem;
+        padding-right: 1rem;
+        color: var(--white);
       }
 
-      svg {
-        transform: translateX(5px);
+      span {
+        font-size: 1rem;
+      }
+
+      &:nth-child(1) {
+        border-top: none;
       }
     }
   }

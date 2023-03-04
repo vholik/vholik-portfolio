@@ -382,65 +382,53 @@ hr {
   font-size: 10vw;
 }
 
-.loop-row {
-  display: flex;
-  width: -moz-max-content;
-  width: max-content;
-  align-items: center;
-  font-size: 5vw;
-  gap: 5vw;
-}
-
 .wrapper {
-  overflow: hidden;
-  margin-top: 2rem;
-  height: -moz-fit-content;
-  height: fit-content;
-  padding: 4rem 2rem;
-  background-color: var(--grey-bg);
-  border-radius: var(--border-radius);
-}
-
-.projects-list {
   margin-top: 2rem;
 }
-.projects-list li {
-  font-size: 1.2rem;
-  border-bottom: 1px solid var(--stroke);
-  padding-top: 1rem;
-  padding-bottom: 1rem;
-  cursor: pointer;
-  overflow: hidden;
+.wrapper .image-wrapper {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 600px;
+  height: 400px;
+  pointer-events: none;
+  opacity: 0;
+  z-index: 100;
+}
+.wrapper .image-wrapper img {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.wrapper ul li {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  padding: 2rem 0;
+  border-top: 1px solid var(--stroke);
+  font-size: 2rem;
+  color: var(--grey);
+  cursor: pointer;
+  transition: color 0.4s ease, padding 0.4s ease;
   position: relative;
 }
-.projects-list li:after {
-  content: "";
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  height: 1px;
-  background-color: var(--white);
-  width: 0%;
-  transition: width 0.8s ease;
-}
-.projects-list li svg {
-  transform: translateX(-20px);
-  position: absolute;
-  transition: transform 0.4s ease;
-}
-.projects-list li a {
-  color: var(--whtie);
-  transition: transform 0.4s ease;
-}
-.projects-list li:hover:after {
+.wrapper ul li .inner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
 }
-.projects-list li:hover a {
-  transform: translateX(30px);
+.wrapper ul li:hover {
+  padding-left: 1rem;
+  padding-right: 1rem;
+  color: var(--white);
 }
-.projects-list li:hover svg {
-  transform: translateX(5px);
+.wrapper ul li span {
+  font-size: 1rem;
+}
+.wrapper ul li:nth-child(1) {
+  border-top: none;
 }/*# sourceMappingURL=styles.css.map */
