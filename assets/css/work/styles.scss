@@ -1,0 +1,75 @@
+@import "../../shared/styles/normalize";
+@import "../../shared/styles/vars";
+@import "../../shared/styles/header";
+@import "../../shared/styles/contact";
+@import "../../shared/styles/loading";
+@import "../../shared/styles/menu";
+
+.loop-row {
+  display: flex;
+  width: max-content;
+  align-items: center;
+  font-size: 5vw;
+  gap: 5vw;
+}
+
+.wrapper {
+  overflow: hidden;
+  margin-top: 2rem;
+  height: fit-content;
+  padding: 4rem 2rem;
+  background-color: var(--grey-bg);
+  border-radius: var(--border-radius);
+}
+
+.projects-list {
+  margin-top: 2rem;
+
+  li {
+    font-size: 1.2rem;
+    border-bottom: 1px solid var(--stroke);
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    cursor: pointer;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    position: relative;
+
+    &:after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background-color: var(--white);
+      width: 0%;
+      transition: width 0.8s ease;
+    }
+
+    svg {
+      transform: translateX(-20px);
+      position: absolute;
+      transition: transform 0.4s ease;
+    }
+
+    a {
+      color: var(--whtie);
+      transition: transform 0.4s ease;
+    }
+
+    &:hover {
+      &:after {
+        width: 100%;
+      }
+      a {
+        transform: translateX(30px);
+      }
+
+      svg {
+        transform: translateX(5px);
+      }
+    }
+  }
+}
