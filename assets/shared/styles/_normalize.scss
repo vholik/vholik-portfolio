@@ -1,0 +1,90 @@
+@import "./vars";
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap");
+
+html {
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+body {
+  background-color: var(--black);
+  color: var(--white);
+  font-family: var(--font);
+  margin: 2rem;
+  transition: background 0.2s linear;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-weight: 400 !important;
+}
+
+ul {
+  list-style: none;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+h1,
+h2,
+h3,
+p,
+li,
+a {
+  // letter-spacing: -0.04em;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+  font-family: var(--font);
+}
+
+.white {
+  color: var(--white);
+}
+
+.arrow-btn {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  gap: 1rem;
+  transition: opacity 0.2s linear;
+
+  &:hover {
+    opacity: 0.6 !important;
+  }
+
+  span {
+    font-weight: 500;
+    position: relative;
+
+    &::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      height: 1px;
+      bottom: -4px;
+      background-color: var(--white);
+    }
+  }
+}
+
+.section-mark {
+  font-weight: 400;
+  font-size: 1rem;
+  color: var(--grey);
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+hr {
+  border: none;
+  border-top: 1px solid var(--stroke);
+}
