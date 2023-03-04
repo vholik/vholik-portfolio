@@ -61,7 +61,6 @@ const works = document.querySelectorAll(".case-img");
 const tlH = gsap.timeline({
   scrollTrigger: {
     trigger: ".text-animated",
-    // markers: { startColor: "white", endColor: "white" },
     scrub: true,
     start: "-90%",
     end: "20%",

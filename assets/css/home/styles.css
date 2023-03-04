@@ -5,6 +5,8 @@
   --grey-bg: #171717;
   --stroke: #363636;
   --white: #fff;
+  --white-hover: #cbcbcb;
+  --red: #cc0000;
   --grey: #808080;
   --border-radius: 14px;
   --font: "Neue Montreal", "Inter", "sans-serif";
@@ -31,6 +33,15 @@ body {
   font-weight: 400 !important;
 }
 
+input,
+button {
+  border: none;
+  outline: none;
+  color: var(--white);
+  font-size: 1rem;
+  font-family: var(--font);
+}
+
 ul {
   list-style: none;
 }
@@ -38,6 +49,12 @@ ul {
 .container {
   max-width: 1200px;
   margin: 0 auto;
+}
+
+.error {
+  margin-top: 1rem;
+  color: var(--red);
+  display: none;
 }
 
 a {
@@ -93,6 +110,8 @@ hr {
   --grey-bg: #171717;
   --stroke: #363636;
   --white: #fff;
+  --white-hover: #cbcbcb;
+  --red: #cc0000;
   --grey: #808080;
   --border-radius: 14px;
   --font: "Neue Montreal", "Inter", "sans-serif";
@@ -183,6 +202,8 @@ hr {
   --grey-bg: #171717;
   --stroke: #363636;
   --white: #fff;
+  --white-hover: #cbcbcb;
+  --red: #cc0000;
   --grey: #808080;
   --border-radius: 14px;
   --font: "Neue Montreal", "Inter", "sans-serif";
@@ -233,6 +254,8 @@ hr {
   --grey-bg: #171717;
   --stroke: #363636;
   --white: #fff;
+  --white-hover: #cbcbcb;
+  --red: #cc0000;
   --grey: #808080;
   --border-radius: 14px;
   --font: "Neue Montreal", "Inter", "sans-serif";
@@ -279,6 +302,8 @@ hr {
   --grey-bg: #171717;
   --stroke: #363636;
   --white: #fff;
+  --white-hover: #cbcbcb;
+  --red: #cc0000;
   --grey: #808080;
   --border-radius: 14px;
   --font: "Neue Montreal", "Inter", "sans-serif";

@@ -21,6 +21,15 @@ body {
   font-weight: 400 !important;
 }
 
+input,
+button {
+  border: none;
+  outline: none;
+  color: var(--white);
+  font-size: 1rem;
+  font-family: var(--font);
+}
+
 ul {
   list-style: none;
 }
@@ -37,6 +46,12 @@ p,
 li,
 a {
   // letter-spacing: -0.04em;
+}
+
+.error {
+  margin-top: 1rem;
+  color: var(--red);
+  display: none;
 }
 
 a {
