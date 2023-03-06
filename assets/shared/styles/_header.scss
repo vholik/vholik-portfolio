@@ -27,7 +27,7 @@
       max-width: 24px;
       max-height: 24px;
       position: relative;
-      pointer-events: none !important;
+      pointer-events: none;
 
       &:nth-child(1) {
         left: 7px;
@@ -48,7 +48,7 @@
     display: flex;
     align-items: center;
     gap: 2rem;
-    color: $white;
+    color: var(--white);
   }
 
   .burger-menu {
@@ -59,7 +59,7 @@
     .line {
       min-width: 35px;
       max-width: 35px;
-      background-color: white;
+      background-color: var(--white);
       height: 2px;
       transition: transform 0.4s ease;
 
@@ -84,6 +84,16 @@
       &:nth-child(2) {
         transform: rotate(-45deg);
         margin-top: -2px;
+      }
+    }
+  }
+}
+@media screen and (max-width: 700px) {
+  .header {
+    .right {
+      .header-list,
+      .theme-switch {
+        display: none;
       }
     }
   }

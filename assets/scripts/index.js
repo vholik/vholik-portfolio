@@ -5,8 +5,8 @@ const workLine = gsap.timeline({
   scrollTrigger: {
     trigger: ".work",
     // markers: { startColor: "white", endColor: "white" },
-    start: "end",
-    end: "+=500",
+    start: "0",
+    end: "bottom 40%",
     scrub: true,
     pin: ".work-title",
   },
@@ -94,67 +94,6 @@ tlHRemove.to(".text-animated span", {
   color: "var(--grey)",
   stagger: 1,
 });
-
-const themeSwitch = document.querySelector(".theme-switch");
-const themeSwitchCircle = document.querySelector(".theme-switch .circle");
-
-const themes = [
-  {
-    ["--black"]: "#101010",
-    ["--grey-bg"]: "#171717",
-    ["--stroke"]: "#363636",
-    ["--white"]: "#fff",
-    ["--grey"]: "#808080",
-  },
-  {
-    ["--black"]: "#f8f8f8",
-    ["--grey-bg"]: "#fff",
-    ["--stroke"]: "rgba(29,29,32,.1)",
-    ["--white"]: "#1d1d20",
-    ["--grey"]: "#787878",
-  },
-];
-
-let isLightTheme = false;
-
-document.addEventListener("DOMContentLoaded", () => {
-  const storedTheme = localStorage.getItem("isLightTheme", isLightTheme);
-
-  if (JSON.parse(storedTheme)) {
-    isLightTheme = true;
-
-    themeSwitchCircle.style.transform = "translateX(34px)";
-    Object.entries(themes[1]).forEach((arr) => {
-      document.documentElement.style.setProperty(arr[0], arr[1]);
-    });
-  } else {
-    isLightTheme = false;
-    themeSwitchCircle.style.transform = "translateX(0)";
-    Object.entries(themes[0]).forEach((arr) => {
-      document.documentElement.style.setProperty(arr[0], arr[1]);
-    });
-  }
-});
-
-themeSwitch.addEventListener("click", () => {
-  loadTheme();
-});
-
-function loadTheme() {
-  if (!isLightTheme) {
-    isLightTheme = true;
-    themeSwitchCircle.style.transform = "translateX(34px)";
-  } else {
-    isLightTheme = false;
-    themeSwitchCircle.style.transform = "translateX(0)";
-  }
-
-  localStorage.setItem("isLightTheme", isLightTheme);
-
-  Object.entries(themes[isLightTheme ? 1 : 0]).forEach((arr) => {
-    document.documentElement.style.setProperty(arr[0], arr[1]);
-  });
-}
 
 const tlLine = gsap.timeline({
   defaults: { duration: 1.5, ease: "Power3.easeInOut" },
@@ -252,7 +191,7 @@ const ctcLine = gsap.timeline({
   defaults: { duration: 1, ease: "Power2.easeOut" },
   scrollTrigger: {
     trigger: "#contact",
-    start: "-90%",
+    start: "-110%",
     end: "40%",
   },
 });
@@ -269,3 +208,127 @@ ctcLine.fromTo(
   { opacity: 1, y: 0 },
   "<40%"
 );
+
+function caseTextChange(text, service, link) {
+  function getSpans(t) {
+    const text = [...t]
+      .map((t) => {
+        if (t !== " ") {
+          return `<span>${t}</span>`;
+        }
+
+        return "&nbsp;";
+      })
+      .join("");
+
+    return text;
+  }
+
+  const caseLine = gsap.timeline({
+    defaults: { duration: 0.4, ease: "Power3.easeInOut" },
+  });
+
+  const title = document.querySelector(".case-wrapper .case-title");
+  const subtitle = document.querySelector(".case-wrapper .case-service");
+  const button = document.querySelector(".case-wrapper .case-btn");
+  button.setAttribute("href", link);
+
+  text = getSpans(text);
+  service = getSpans(service);
+
+  caseLine.to(".case-wrapper .case-title span", {
+    opacity: 0,
+    y: 20,
+    stagger: 0.05,
+    onComplete: () => {
+      title.innerHTML = text;
+
+      gsap.fromTo(
+        ".case-wrapper .case-title span",
+        { opacity: 0, y: 20 },
+        { opacity: 1, y: 0, stagger: 0.05, duration: 0.4 }
+      );
+    },
+  });
+
+  caseLine.to(
+    ".case-wrapper .case-service span",
+    {
+      opacity: 0,
+      y: 10,
+      stagger: 0.05,
+      onComplete: () => {
+        subtitle.innerHTML = service;
+
+        gsap.fromTo(
+          ".case-wrapper .case-service span",
+          { opacity: 0, y: 10 },
+          { opacity: 1, y: 0, stagger: 0.05, duration: 0.4 }
+        );
+      },
+    },
+    "<20%"
+  );
+}
+
+gsap.to(".case-wrapper", {
+  value: 100,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".work .container",
+    // markers: { startColor: "red", endColor: "red" },
+    start: "top 30%",
+    end: "bottom 800",
+    pin: ".case-wrapper",
+  },
+});
+
+gsap.to(".case-wrapper", {
+  value: 100,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".case:nth-child(1)",
+    // markers: { startColor: "red", endColor: "red" },
+    start: "-700",
+    end: "150",
+    onEnterBack: () => {
+      caseTextChange("Opal Transport", "Dev bruh");
+    },
+  },
+});
+
+gsap.to(".case-wrapper", {
+  value: 100,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".case:nth-child(2)",
+    // markers: { startColor: "yellow", endColor: "yellow" },
+    start: "-700",
+    end: "150",
+    onEnter: () => caseTextChange("Monoshop", "Dev bruh"),
+    onEnterBack: () => caseTextChange("Monoshop", "Dev bruh"),
+  },
+});
+
+gsap.to(".case-wrapper", {
+  value: 100,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".case:nth-child(3)",
+    start: "-700",
+    end: "150",
+    onEnter: () => caseTextChange("Monocode", "Dev bruh"),
+    onEnterBack: () => caseTextChange("Monocode", "Dev bruh"),
+  },
+});
+
+gsap.to(".case-wrapper", {
+  value: 100,
+  ease: "none",
+  scrollTrigger: {
+    trigger: ".case:nth-child(4)",
+    start: "-700",
+    end: "150",
+    onEnter: () => caseTextChange("Warsztat", "Dev bruh"),
+  },
+});

@@ -105,6 +105,11 @@ hr {
   border-top: 1px solid var(--stroke);
 }
 
+@media screen and (max-width: 700px) {
+  body {
+    margin: 1rem;
+  }
+}
 :root {
   --black: #101010;
   --grey-bg: #171717;
@@ -146,7 +151,7 @@ hr {
   max-width: 24px;
   max-height: 24px;
   position: relative;
-  pointer-events: none !important;
+  pointer-events: none;
 }
 .header .theme-switch img:nth-child(1) {
   left: 7px;
@@ -163,7 +168,7 @@ hr {
   display: flex;
   align-items: center;
   gap: 2rem;
-  color: #fff;
+  color: var(--white);
 }
 .header .burger-menu {
   width: -moz-fit-content;
@@ -174,7 +179,7 @@ hr {
 .header .burger-menu .line {
   min-width: 35px;
   max-width: 35px;
-  background-color: white;
+  background-color: var(--white);
   height: 2px;
   transition: transform 0.4s ease;
 }
@@ -197,6 +202,12 @@ hr {
   margin-top: -2px;
 }
 
+@media screen and (max-width: 700px) {
+  .header .right .header-list,
+  .header .right .theme-switch {
+    display: none;
+  }
+}
 :root {
   --black: #101010;
   --grey-bg: #171717;
@@ -249,6 +260,25 @@ hr {
   right: 0;
 }
 
+@media screen and (max-width: 1200px) {
+  .contact {
+    padding-left: 4rem;
+    padding-right: 4rem;
+  }
+}
+@media screen and (max-width: 400px) {
+  .contact {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .contact .footer__inner {
+    grid-template-columns: repeat(1, 1fr);
+    grid-gap: 1rem;
+  }
+  .contact .copyright {
+    position: static !important;
+  }
+}
 :root {
   --black: #101010;
   --grey-bg: #171717;
@@ -318,7 +348,7 @@ hr {
   left: 0;
   position: fixed;
   padding: 2rem;
-  z-index: 1;
+  z-index: 3;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -412,6 +442,7 @@ hr {
   background-color: rgba(255, 255, 255, 0.05);
   width: 400px;
   border-radius: 4px;
+  position: relative;
 }
 .contact-form .input::-moz-placeholder {
   color: rgba(255, 255, 255, 0.2);

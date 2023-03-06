@@ -1,7 +1,7 @@
 gsap
   .timeline()
   .set(".projects-list", { autoAlpha: 1 })
-  .from(".wrapper li", {
+  .from(".wrapper li .inner", {
     duration: 0,
     xPercent: 25,
     yPercent: 125,
