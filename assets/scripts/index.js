@@ -292,7 +292,7 @@ gsap.to(".case-wrapper", {
     start: "-700",
     end: "150",
     onEnterBack: () => {
-      caseTextChange("Opal Transport", "Dev bruh");
+      caseTextChange("Opal Transport", "Web design & development");
     },
   },
 });
@@ -305,8 +305,8 @@ gsap.to(".case-wrapper", {
     // markers: { startColor: "yellow", endColor: "yellow" },
     start: "-700",
     end: "150",
-    onEnter: () => caseTextChange("Monoshop", "Dev bruh"),
-    onEnterBack: () => caseTextChange("Monoshop", "Dev bruh"),
+    onEnter: () => caseTextChange("Monoshop", "Web design & development"),
+    onEnterBack: () => caseTextChange("Monoshop", "Web design & development"),
   },
 });
 
@@ -317,8 +317,8 @@ gsap.to(".case-wrapper", {
     trigger: ".case:nth-child(3)",
     start: "-700",
     end: "150",
-    onEnter: () => caseTextChange("Monocode", "Dev bruh"),
-    onEnterBack: () => caseTextChange("Monocode", "Dev bruh"),
+    onEnter: () => caseTextChange("Monocode", "Web design & development"),
+    onEnterBack: () => caseTextChange("Monocode", "Web design & development"),
   },
 });
 
@@ -329,6 +329,6 @@ gsap.to(".case-wrapper", {
     trigger: ".case:nth-child(4)",
     start: "-700",
     end: "150",
-    onEnter: () => caseTextChange("Warsztat", "Dev bruh"),
+    onEnter: () => caseTextChange("Warsztat", "Web design & development"),
   },
 });
