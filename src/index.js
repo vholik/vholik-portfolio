@@ -194,3 +194,43 @@ vm.onLeave((menu, btn) => {
     "<20%"
   );
 });
+
+const ln = gsap.timeline({
+  defaults: { duration: 2, ease: Expo.easeInOut },
+});
+
+// document.querySelectorAll(".hero__title").forEach((it) => {
+//   const text = it.innerHTML;
+
+//   it.innerHTML = text
+//     .split(" ")
+//     .map((c) => {
+//       if (c === "" || c === "") return;
+//       return `<span class="word"><span>${c}</span></span>`;
+//     })
+//     .slice(1)
+//     .join(" ");
+// });
+
+ln.fromTo(
+  ".hero__title .line span",
+  {
+    y: "100%",
+  },
+  {
+    y: "0%",
+    stagger: 0.05,
+  }
+);
+
+ln.fromTo(
+  ".hero-text:before",
+  {
+    // height: "0%",
+    opacity: 0,
+  },
+  {
+    // height: "100%",
+    opacity: 1,
+  }
+);
