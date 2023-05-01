@@ -1,0 +1,28 @@
+$white: #f3f3f3;
+$white-onhover: #d8d8d8;
+$black: #1c1c20;
+$stroke: #3f3f3f;
+$text-select: #939393;
+$bg: #1b1b1b;
+$bg-light: #3f3f3f;
+$gray: #73767a;
+$font: "Neue Haas Grotesk Display Pro", sans-serif;
+$transition: 0.2s linear;
+
+:root {
+  --grid: repeat(6, 1fr);
+  --grid-gap: 2rem;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --grid: repeat(4, 1fr);
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --grid-gap: 1rem;
+    --grid: repeat(2, 1fr);
+  }
+}

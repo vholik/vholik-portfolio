@@ -1,0 +1,65 @@
+@import "./typography";
+
+.menu {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-color: $black;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+
+  &__nav-list {
+    li a {
+      font-size: var(--h-xxl);
+    }
+  }
+
+  &__link-list {
+    li {
+      margin-top: 0.5rem;
+      a {
+        font-size: var(--fs-xl);
+      }
+    }
+  }
+
+  .btn {
+    margin-top: 6rem;
+  }
+
+  &__inner {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+  }
+}
+
+.active-menu-btn {
+  gap: 0 !important;
+  .line {
+    transform: rotate(45deg);
+
+    &:nth-child(2) {
+      transform: rotate(-45deg);
+    }
+  }
+}
+
+@media (max-width: 768px) {
+  .menu {
+    &__inner {
+      flex-direction: column;
+      align-items: flex-start;
+
+      .right {
+        margin-top: 4rem;
+      }
+    }
+  }
+}
