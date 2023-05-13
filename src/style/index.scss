@@ -72,6 +72,7 @@ a {
   padding: 0.5em 1em;
   border: 1px solid var(--color-stroke);
   border-radius: 2em;
+  font-weight: 500;
 
   transition: background var(--transition);
 
@@ -87,6 +88,7 @@ a {
   transition: background var(--transition);
   padding: 0.6em 1em;
   border-radius: 2em;
+  font-weight: 500;
 
   &:hover {
     background-color: var(--color-bg-gray);
