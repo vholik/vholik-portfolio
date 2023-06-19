@@ -20,8 +20,20 @@ $aos-distance: 50px;
 }
 
 .work {
+  margin-top: 10rem;
+
+  .work-title {
+    font-size: 1.5rem;
+    margin-bottom: 2.5rem;
+  }
+
   .work-item {
-    margin-top: 10rem;
+    margin-bottom: 10rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+
     .heading {
       display: flex;
       align-items: center;
@@ -61,7 +73,7 @@ $aos-distance: 50px;
     .subheading {
       margin-top: 2rem;
       font: var(--font-base);
-      max-width: 450px;
+      max-width: 500px;
       color: var(--color-gray);
     }
 
